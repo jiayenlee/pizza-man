@@ -8,9 +8,47 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
+    <div class="navbar">
+      <nav>
+        <%= image_tag "logo.png", alt: "logo" %>
+      </nav>
+      <div class="nav-category">
+        <ul id="nav-items">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Menu", menu_path %></li>
+        </ul>
+      </div>
+    </div>
+
     <%= yield %>
+
+    <div class="footer-container">
+      <div class="info-container">
+        <div class="info-row">
+          <div class="info-col">
+            <h2>COMPANY</h2>
+            <ul>
+              <li><%= link_to "ABOUT US", aboutus_path %></li>
+              <li><%= link_to "FAQ" %></li>
+              <li><a href="mailto:jiiayenn.lee@gmail.com"> CONTACT US </a></li>
+            </ul>
+          </div>
+
+          <div class="info-col">
+            <h2>SOCIAL MEDIA</h2>
+            <ul class="social">
+              <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>
